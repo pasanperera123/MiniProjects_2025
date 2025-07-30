@@ -1,0 +1,46 @@
+import random
+import time
+
+max_value=10
+min_value=2
+q_num=10
+math_func=["+","-","*"]
+
+
+
+def rand_qgen():
+    x=random.randint(min_value,max_value)
+    y=random.randint(min_value,max_value)
+    op=random.choice(math_func)
+    expr=str(x)+" "+op+" "+str(y)
+    ans=eval(expr)
+    return expr, ans
+
+def main():
+    score=0
+    input("Welcome to Maths Master! Press Enter to start...")
+
+    start_time= time.time()
+    for i in range(q_num):
+        exp, an = rand_qgen()
+        u_reply = input("Problem #" + str(i+1) + " " + exp + " = ")
+        if u_reply == str(an):
+            score += 1
+            print ("correct")
+        else :
+            score -= 1
+            print ("wrong")
+
+    end_time=time.time()
+    total_time=round(end_time-start_time, 2)
+
+
+
+    print("-----------------------------------")
+    print("Nice!! You have taken ",total_time,"seconds!")
+    print("Your score is ", score)
+
+main()
+
+
+
