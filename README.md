@@ -8,3 +8,7 @@ Generate 10 random maths questions
 Have to answer those quaestions
 if correct +1 Score if not then -1 Score
 
+Mini Project 03 - SpellingBee
+Have only 5 attempts
+Need to guess all three words correctly to get the maximum score level.
+
